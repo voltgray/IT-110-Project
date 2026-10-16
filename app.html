@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary App</title>
+    <!-- Font Awesome for Search Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Design.css">
+</head>
+<body class="dictionary-body">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="app.html" class="app-link">Project</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="app-header">
+        <div class="badge">IT 110 Midterm Project </div>
+        <h1 class="main-title">Dictionary</h1>
+        <p class="sub-title">Simple Dictionary Application</p>
+    </header>
+
+    <!-- Dictionary Card C -->
+    <main class="dictionary-card">
+        <h2 class="card-title">English Dictionary</h2>
+
+        <!-- Input boxx -->
+<!-- Input box section -->
+<div class="search-box">
+    <input type="text" id="word-input" placeholder="Search a word...">
+    <button id="search-btn" class="search-btn">Search</button>
+</div>
+        <p class="hint-text">Type any existing word and press enter to get meaning, example, and synonyms</p>
+
+        <!-- Result Container -->
+        <div id="result-container" class="result-container"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
