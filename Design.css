@@ -1,0 +1,348 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding-top: 60px; /* Pushes content down below the fixed navbar */
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    padding: 12px 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #527586;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #174a63;
+}
+
+.nav-links .app-link {
+    background-color: #cfeeff;
+    padding: 6px 14px;
+    border-radius: 8px;
+    color: #174a63;
+    font-weight: 600;
+}
+
+#home {
+    height: 10rem;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    background-color: #cfeeff;
+    border-radius: 12px;
+    gap: 40px;
+}
+
+.pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 1.5rem;
+}
+
+.sub {
+    color: #666666;
+    font-size: 0.95rem;
+}
+
+#About {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: #ffffff09;
+}
+
+.aboutme {
+    color: #174a63;
+    font-size: 1.3rem;
+}
+
+.Intro {
+    font-size: 1rem;
+    color: #444444;
+    text-align: justify;
+    margin-top: 0px;
+}
+
+footer {
+    text-align: center;
+    background-color: #cfeeff07;
+    color: #527586;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  #home {
+    width: 100%;
+    gap: 10px;
+    height: 15rem;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* for app.html hehe */
+
+/* Dictionary Page Styles */
+.dictionary-body {
+    background: linear-gradient(135deg, #e2e8fe 0%, #dbe2fb 50%, #eae6fe 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Section */
+.app-header {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #ffffff90;
+    border: 1px solid #d0d7fe;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #4a5568;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.main-title {
+    font-size: 3rem;
+    color: #1a202c;
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.sub-title {
+    color: #64748b;
+    font-size: 1.1rem;
+    margin-top: 8px;
+    font-weight: 400;
+}
+
+/* ictionary Card */
+.dictionary-card {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 35px;
+    width: 90%;
+    max-width: 580px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.card-title {
+    text-align: center;
+    color: #2d3748;
+    font-size: 1.4rem;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+}
+
+/* Search Input Box */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    color: #94a3b8;
+    font-size: 1rem;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px 16px 14px 45px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    font-size: 1rem;
+    color: #334155;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.search-box input:focus {
+    border-color: #818cf8;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.2);
+}
+
+.hint-text {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: left;
+    padding-left: 4px;
+}
+
+/* Dynamic Results Container */
+.result-container {
+    margin-top: 25px;
+}
+
+.word-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.word-title {
+    font-size: 1.8rem;
+    color: #1e293b;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.phonetic {
+    font-size: 1rem;
+    color: #6366f1;
+    font-weight: 500;
+}
+
+.pos-tag {
+    display: inline-block;
+    font-style: italic;
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.definition-box {
+    background-color: #ffffff80;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #6366f1;
+    margin-bottom: 12px;
+}
+
+.meaning {
+    color: #334155;
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.example {
+    color: #64748b;
+    font-size: 0.88rem;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.error-msg {
+    color: #e11d48;
+    background-color: #ffe4e6;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* the search button ~~~~~~*/
+
+/* Update or add to your .search-box container */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 8px 12px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+/* Adjust the input inside the search box so it fills the space */
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    padding: 8px;
+    color: #1f2937;
+}
+
+/* Style the Search Button */
+.search-btn {
+    padding: 10px 20px;
+    background: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.search-btn:hover {
+    background: #4f46e5;
+}
+
+.search-btn:active {
+    transform: scale(0.97);
+}
+
+/* Disabled / Grayed-out state styling */
+input:disabled, button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
