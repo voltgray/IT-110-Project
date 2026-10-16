@@ -7,8 +7,12 @@ async function fetchDictionaryData(word) {
     if (!cleanWord) return;
     
     // 1. Check network connection first
-    if (!navigator.onLine) {
-        resultContainer.innerHTML = `<p class="error-msg">No internet connection. Please check your network and try again.</p>`;
+if (!navigator.onLine) {
+        resultContainer.innerHTML = `
+            <div class="error-box" style="padding: 15px; background: rgba(239, 68, 68, 0.1); border: 1px solid #ef4444; border-radius: 12px; color: #dc2626; text-align: center; margin-top: 20px;">
+                <p><strong>Error:</strong> No internet connection. Please check your network and try again.</p>
+            </div>
+        `;
         return;
     }
 
@@ -34,18 +38,15 @@ async function fetchDictionaryData(word) {
         displayResult(data[0]);
 
     } catch (error) {
-        console.error("Detailed Error:", error);
-        
-        // 3. this showss the errorr messages based on failure type
-        if (error.message === "Word not found") {
-            resultContainer.innerHTML = `<p class="error-msg">Sorry, we couldn't find definitions for "${cleanWord}". Try searching for another one!</p>`;
-        } else if (error.name === 'TypeError' || error.message.includes('Failed to fetch')) {
-            resultContainer.innerHTML = `<p class="error-msg">Network error: Unable to reach the dictionary server. Please check your connection.</p>`;
-        } else {
-            resultContainer.innerHTML = `<p class="error-msg">An unexpected error occurred: ${error.message}</p>`;
-        }
+        console.error("Error:", error);
+        // 3. Display the detailed error directly on the webpage interface
+        resultContainer.innerHTML = `
+            <div class="error-box" style="padding: 15px; background: rgba(239, 68, 68, 0.1); border: 1px solid #ef4444; border-radius: 12px; color: #dc2626; text-align: center; margin-top: 20px;">
+                <p> ${error}</p>
+            </div>
+        `;
     } finally {
-        // 4. Re-enable inputs (remove gray out) after search completes
+        // Re-enable inputs after search completes
         setLoadingState(false);
     }
 }
