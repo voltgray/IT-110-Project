@@ -196,13 +196,6 @@ footer {
     width: 100%;
 }
 
-.search-icon {
-    position: absolute;
-    left: 16px;
-    color: #94a3b8;
-    font-size: 1rem;
-}
-
 .search-box input {
     width: 100%;
     padding: 14px 16px 14px 45px;
@@ -227,7 +220,7 @@ footer {
     margin-top: 10px;
     margin-bottom: 0;
     text-align: left;
-    padding-left: 4px;
+    margin-left: 18px;
 }
 
 /* Dynamic Results Container */
