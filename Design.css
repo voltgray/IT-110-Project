@@ -168,11 +168,10 @@ footer {
     font-weight: 400;
 }
 
-/* ictionary Card */
+/* dictionary Card */
 .dictionary-card {
     background: rgba(255, 255, 255, 0.55);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     padding: 35px;
@@ -297,7 +296,7 @@ footer {
 
 /* the search button ~~~~~~*/
 
-/* Update or add to your .search-box container */
+/* Update or adding of .search-box container */
 .search-box {
     display: flex;
     align-items: center;
@@ -309,7 +308,7 @@ footer {
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
 }
 
-/* Adjust the input inside the search box so it fills the space */
+/* the search vbox */
 .search-box input {
     flex: 1;
     border: none;
